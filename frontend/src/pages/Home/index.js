@@ -8,7 +8,7 @@ const Home = () => {
       <h1>Featured Products</h1>
       <HomeContianer>
         {data.products.map((product) => (
-          <ItemProduct key={product.name} product={product} />
+          <ItemProduct key={product._id} product={product} />
         ))}
       </HomeContianer>
     </main>
