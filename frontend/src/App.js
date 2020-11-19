@@ -1,12 +1,15 @@
 import { GlobalStyles } from './globalStyles'
-
-const { Routes } = require('./config/Routes')
+import { Routes } from './config/Routes'
+import { Provider } from 'react-redux'
+import store from './app/store'
 
 function App() {
   return (
     <>
-      <GlobalStyles />
-      <Routes />
+      <Provider store={store}>
+        <GlobalStyles />
+        <Routes />
+      </Provider>
     </>
   )
 }
