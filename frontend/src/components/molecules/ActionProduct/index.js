@@ -7,7 +7,7 @@ import {
   ActionWrapper,
 } from './ProductActionElements'
 
-const ActionProduct = ({ product }) => {
+const ActionProduct = ({ product, addToCartHandler }) => {
   const [qty, setQty] = useState(1)
 
   return (
@@ -39,9 +39,16 @@ const ActionProduct = ({ product }) => {
           </ActionWrapper>
         )}
         <Gap height={20} />
-        <Button full primary disabled={!product.countInStock}>
-          Add To Cart
-        </Button>
+        {product.countInStock > 0 ? (
+          <Button
+            full
+            primary
+            disabled={!product.countInStock}
+            onClick={() => addToCartHandler(product._id, qty)}
+          >
+            Add To Cart
+          </Button>
+        ) : null}
       </ActionProductContainer>
     </div>
   )

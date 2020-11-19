@@ -1,5 +1,4 @@
 const router = require('express').Router()
-const multer = require('multer')
 const productController = require('./controller')
 const expressAsyncHandler = require('express-async-handler')
 

@@ -5,5 +5,6 @@ import Gap from './Gap'
 import Button from './Button'
 import LoadingBox from './LoadingBox'
 import MessageBox from './MessageBox'
+import Input from './Input'
 
-export { Header, Footer, Rating, Gap, Button, LoadingBox, MessageBox }
+export { Header, Footer, Rating, Gap, Button, LoadingBox, MessageBox, Input }

@@ -3,9 +3,10 @@ import { Link as RouterLink } from 'react-router-dom'
 
 export const HeaderContainer = styled.header`
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  grid-area: header;
   background-color: #203040;
 `
 export const Brand = styled.div`
@@ -45,4 +46,13 @@ export const HeaderDropdown = styled.div`
   &:hover ${HeaderDropdownContent} {
     display: block;
   }
+`
+
+export const CartTotal = styled.span`
+  padding: 0.2rem 0.7rem;
+  background-color: #f02020;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.4rem;
+  margin-left: 0.4rem;
 `

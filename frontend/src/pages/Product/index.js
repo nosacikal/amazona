@@ -25,6 +25,10 @@ const Product = (props) => {
   const productDetail = useSelector((state) => state.productDetail)
   const { product, error, loading } = productDetail
 
+  const addToCartHandler = (productId, qty) => {
+    props.history.push(`/cart/${productId}?qty=${qty}`)
+  }
+
   useEffect(() => {
     dispatch(getDetailProduct(_id))
   }, [_id, dispatch])
@@ -52,7 +56,10 @@ const Product = (props) => {
             <p>{product.description}</p>
           </ProductDescription>
           <ProductAction>
-            <ActionProduct product={product} />
+            <ActionProduct
+              product={product}
+              addToCartHandler={addToCartHandler}
+            />
           </ProductAction>
         </ProductRow>
       )}

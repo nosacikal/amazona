@@ -43,6 +43,11 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.2s ease-in;
   }
 
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
   /* Header */
   header a {
     color: #fff;

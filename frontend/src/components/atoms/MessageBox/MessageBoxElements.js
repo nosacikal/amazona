@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const MessageBoxElement = styled.div`
-  margin: 1rem 0;
   padding: 1rem;
   border: 0.1rem solid transparent;
   border: 0.5rem;
