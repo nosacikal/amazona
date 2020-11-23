@@ -3,11 +3,11 @@ import { Link as RouterLink } from 'react-router-dom'
 
 export const HeaderContainer = styled.header`
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  grid-area: header;
   background-color: #203040;
+  width: 100%;
 `
 export const Brand = styled.div`
   padding: 1rem;
@@ -42,7 +42,6 @@ export const HeaderDropdownContent = styled.ul`
 export const HeaderDropdown = styled.div`
   display: inline-block;
   position: relative;
-
   &:hover ${HeaderDropdownContent} {
     display: block;
   }

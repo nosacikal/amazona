@@ -27,7 +27,7 @@ const Header = ({ cartItems, userInfo, onClick }) => {
                 {userInfo.name} <i className='fa fa-caret-down'></i>
               </HeaderItem>
               <HeaderDropdownContent>
-                <HeaderItem to='/signin'>Order History</HeaderItem>
+                <HeaderItem to='/order-history'>Order History</HeaderItem>
                 <HeaderItem to='/signin'>User Profile</HeaderItem>
                 <HeaderItem to='/signin' onClick={onClick}>
                   Sign-Out

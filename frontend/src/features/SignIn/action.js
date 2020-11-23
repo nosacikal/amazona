@@ -25,4 +25,6 @@ export const signIn = (email, password) => async (dispatch) => {
 export const signOut = () => async (dispatch) => {
   dispatch({ type: SIGN_OUT })
   localStorage.removeItem('userInfo')
+  localStorage.removeItem('shippingAddress')
+  localStorage.removeItem('paymentMethod')
 }

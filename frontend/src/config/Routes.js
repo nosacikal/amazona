@@ -2,7 +2,19 @@ import { useDispatch, useSelector } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Footer, Header } from '../components'
 import { signOut } from '../features/SignIn/action'
-import { Cart, Home, Product, Register, SignIn } from '../pages'
+import {
+  Cart,
+  Home,
+  Payment,
+  PlaceOrder,
+  Product,
+  Register,
+  SignIn,
+  DetailOrder,
+  OrderHistory,
+} from '../pages'
+
+import Shipping from '../pages/Shipping'
 import { GridContainer } from './RoutesElements'
 
 export const Routes = () => {
@@ -28,8 +40,15 @@ export const Routes = () => {
           <Route path={`/cart/:id?`} component={Cart} />
           <Route path={`/signin`} component={SignIn} />
           <Route path={`/register`} component={Register} />
+          <Route path={`/shipping`} component={Shipping} />
+          <Route path={`/payment`} component={Payment} />
+          <Route path={`/placeorder`} component={PlaceOrder} />
+          <Route path={`/order/:id`} component={DetailOrder} />
+          <Route path={`/order-history`} component={OrderHistory} />
           <Route>
-            <p>Page Not Found</p>
+            <main>
+              <div>Page Not Found</div>
+            </main>
           </Route>
         </Switch>
         <Footer />

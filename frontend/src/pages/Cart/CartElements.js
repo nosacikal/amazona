@@ -4,6 +4,8 @@ export const CartRow = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 100%;
 `
 
 export const CartProductContainer = styled.div`

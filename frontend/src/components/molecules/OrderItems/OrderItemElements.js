@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const CartItemList = styled.li`
+export const OrderItemList = styled.li`
   display: flex;
   padding: 1rem;
   justify-content: flex-start;
@@ -13,11 +13,9 @@ export const ItemWrapper = styled.div`
   flex-wrap: wrap;
 `
 
-export const CartImage = styled.img`
+export const OrderImage = styled.img`
   max-width: 5rem;
   width: 100%;
 `
 
-export const CartName = styled.div`
-  text-align: left;
-`
+export const OrderName = styled.div``

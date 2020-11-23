@@ -7,6 +7,7 @@ const app = express()
 
 const productRouter = require('./app/products/router')
 const userRouter = require('./app/users/router')
+const orderRouter = require('./app/orders/router')
 
 app.use(cors())
 app.use(express.json())
@@ -14,6 +15,11 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/api/products', productRouter)
 app.use('/api/users', userRouter)
+app.use('/api/orders', orderRouter)
+
+app.get('/api/config/paypal', (req, res) => {
+  res.send(process.env.PAYPAL_CLIENT_ID || 'sb')
+})
 
 app.use((err, req, res, next) => {
   // if (err && err.name === 'ValidationError') {

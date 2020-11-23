@@ -7,6 +7,6 @@ export const GridContainer = styled.div`
     'main'
     'footer';
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 5fr 5rem;
+  grid-template-rows: 1fr 10fr 5rem;
   height: 100%;
 `

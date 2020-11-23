@@ -16,7 +16,7 @@ const ActionProduct = ({ product, addToCartHandler }) => {
       <ActionProductContainer>
         <ActionWrapper>
           <p>Price</p>
-          <Price>$60</Price>
+          <Price>${product.price}</Price>
         </ActionWrapper>
         <Gap height={10} />
         <ActionWrapper>
